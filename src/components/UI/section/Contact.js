@@ -45,6 +45,7 @@ export default function Contact() {
                     style={{ border: "0" }}
                     allowFullScreen="allowFullScreen"
                     loading="lazy"
+                    title="map putri mandeh"
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </Fade>

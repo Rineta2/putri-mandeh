@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://putri-mandeh.vercel.app/sitemap.xml

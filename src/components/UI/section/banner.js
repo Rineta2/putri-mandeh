@@ -18,7 +18,7 @@ export default function banner() {
               <Fade triggerOnce direction={2000} delay={500}>
                 <Image
                   src={item.img}
-                  alt={item.title}
+                  alt={"banner"}
                   quality={100}
                   loading="lazy"
                   key={item.id}

@@ -37,7 +37,7 @@ export const metadata = {
 };
 
 const siteUrl = "https://putri-mandeh";
-const faviconUrl = `${siteUrl}/favicon.icon`;
+const faviconUrl = `${siteUrl}/favicon.ico`;
 const canonicalUrl = `${siteUrl}/`;
 
 const Head = () => {
@@ -45,7 +45,7 @@ const Head = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "rineta",
-    image: "https://putri-mandeh.vercel.app/favicon.icon",
+    image: "https://putri-mandeh.vercel.app/favicon.ico",
     "@id": "https://putri-mandeh",
     url: "https://putri-mandeh",
     telephone: "081284258290",
@@ -81,7 +81,7 @@ const Head = () => {
 
     description:
       "Menyajikan kelezatan autentik masakan Padang yang bikin nagih! Nikmati rendang empuk, ayam goreng krispi, dan aneka lauk pauk lainnya dengan sambal yang menggugah selera.",
-    logo: "https://putri-mandeh.vercel.app/favicon.icon",
+    logo: "https://putri-mandeh.vercel.app/favicon.ico",
   };
 
   const jsonLdString = JSON.stringify(jsonLd);

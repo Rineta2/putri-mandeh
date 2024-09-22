@@ -1,13 +1,20 @@
 "use client";
 
-import localFont from "next/font/local";
+import React from "react";
 
 import "@/components/sass/globals.scss";
-
 import { CartProvider } from "@/components/context/CartContext";
 
 import "@/components/sass/Header.scss";
 import "react-toastify/dist/ReactToastify.css";
+
+import { Roboto } from "next/font/google";
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
+});
+
 import { ToastContainer } from "react-toastify";
 
 import dynamic from "next/dynamic";
@@ -22,36 +29,38 @@ const Header = dynamic(() => import("@/components/layout/Header"), {
 
 import Head from "@/components/UI/data/head";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
-
 import { usePathname } from "next/navigation";
+
+import "animate.css";
+
+import Loading from "@/components/animation/loading";
+
+import useLoading from "@/components/animation/useLoading";
+import useIsClient from "@/components/animation/usClient";
 
 const disableHeader = ["/checkout"];
 const disableFooter = ["/checkout"];
-import "animate.css";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
+
+  const isLoading = useLoading();
+  const isClient = useIsClient();
   return (
     <html lang="en">
       <Head />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={roboto.className}>
         <main>
-          <CartProvider>
-            <ToastContainer />
-            {!disableHeader.includes(pathname) && <Header />}
-            {children}
-            {!disableFooter.includes(pathname) && <Footer />}
-          </CartProvider>
+          {isClient && isLoading ? (
+            <Loading />
+          ) : (
+            <CartProvider>
+              <ToastContainer />
+              {!disableHeader.includes(pathname) && <Header />}
+              {children}
+              {!disableFooter.includes(pathname) && <Footer />}
+            </CartProvider>
+          )}
         </main>
       </body>
     </html>

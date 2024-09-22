@@ -95,15 +95,24 @@ const Head = () => {
       <meta name="version" content="1.0" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={metadata.description} />
-      <meta name="author" content={metadata.author} />
-      <meta name="keywords" content={metadata.keywords} />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
+      <meta property="og:description" content={metadata.description} />
+      <meta property="og:type" content="property & designer" />
       <meta name="google-site-verification" content={metadata.verification} />
-      <link rel="canonical" href={canonicalUrl} />
-      <link rel="icon" href={faviconUrl} />
+      <meta property="og:title" content={metadata.title} />
+      <meta name="author" content={metadata.author} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={faviconUrl} />
+      <meta name="keywords" content={metadata.keywords} />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="robots" content="index, follow" />
+      <link rel="icon" href={faviconUrl} type="image/x-icon" sizes="any" />
+      <link rel="icon" href={faviconUrl} type="image/svg+xml" />
+      <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href={faviconUrl} />
       <link rel="shortcut icon" href={faviconUrl} type="image/x-icon" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="canonical" href={canonicalUrl} />
 
       <Script
         id="google-tag-manager"

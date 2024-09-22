@@ -17,6 +17,8 @@ const nextConfig = {
     NEXT_PUBLIC_VERTIFICATION_API_KEY:
       process.env.NEXT_PUBLIC_VERTIFICATION_API_KEY,
   },
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 export default nextConfig;

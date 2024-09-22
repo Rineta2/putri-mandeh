@@ -19,7 +19,7 @@ export const metadata = {
     siteName: "Putri Mandeh",
     images: [
       {
-        url: "https://putri-mandeh.vercel.app/favicon.icon",
+        url: "https://putri-mandeh.vercel.app/favicon.ico",
         width: 1920,
         height: 1080,
       },
@@ -44,7 +44,7 @@ const Head = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "rineta",
+    name: "putri mandeh",
     image: "https://putri-mandeh.vercel.app/favicon.ico",
     "@id": "https://putri-mandeh",
     url: "https://putri-mandeh",
@@ -74,14 +74,15 @@ const Head = () => {
         "Saturday",
         "Sunday",
       ],
-      opens: "09:00 AM",
-      closes: "21:00 PM",
+      opens: "09:00",
+      closes: "21:00",
     },
     sameAs: ["https://www.facebook.com/", "https://www.instagram.com/"],
 
     description:
       "Menyajikan kelezatan autentik masakan Padang yang bikin nagih! Nikmati rendang empuk, ayam goreng krispi, dan aneka lauk pauk lainnya dengan sambal yang menggugah selera.",
     logo: "https://putri-mandeh.vercel.app/favicon.ico",
+    title: "Putri Mandeh",
   };
 
   const jsonLdString = JSON.stringify(jsonLd);

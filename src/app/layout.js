@@ -43,8 +43,8 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
   return (
     <html lang="en">
+      <Head />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Head />
         <main>
           <CartProvider>
             <ToastContainer />

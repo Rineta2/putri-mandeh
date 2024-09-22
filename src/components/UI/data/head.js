@@ -8,8 +8,6 @@ export const metadata = {
     "Menyajikan kelezatan autentik masakan Padang yang bikin nagih! Nikmati rendang empuk, ayam goreng krispi, dan aneka lauk pauk lainnya dengan sambal yang menggugah selera.",
   author: "rineta",
   keywords: "Masakan Padang, Warung nasi padang",
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
   icons: {
     icon: "/favicon.ico",
   },

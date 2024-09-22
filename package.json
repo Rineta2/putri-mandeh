@@ -39,6 +39,7 @@
     "react-toastify": "^10.0.5",
     "remixicon": "^4.3.0",
     "sass": "^1.78.0",
+    "sharp": "^0.33.5",
     "swiper": "^11.1.12"
   }
 }
